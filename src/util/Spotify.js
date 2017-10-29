@@ -1,6 +1,7 @@
 const clientId = '81f41285a2ce4de8a6dd86570df4a60a';
 //const redirectUri = 'http://localhost:3000/';
-const redirectUri = 'http://Wrathful-list.surge.sh/';
+//const redirectUri = 'http://wrathful-list.surge.sh/';
+const redirectUri = 'http://fearful-bat.surge.sh';
 let userAccessToken = '';
 
 const Spotify = {
