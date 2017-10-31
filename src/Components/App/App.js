@@ -11,10 +11,8 @@ class App extends Component {
     super(props);
     this.state = {
       playlistName: 'New playlist',
-      playlistTracks: [
-      ],
-      searchResults: [
-      ]
+      playlistTracks: [],
+      searchResults: []
     };
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
@@ -45,7 +43,10 @@ class App extends Component {
     const trackUris = this.state.playlistTracks.map(track => track.URI);
     if (trackUris.length > 0) {
       Spotify.savePlayList(this.state.playlistName, trackUris).then(results => {
-        this.setState({ searchResults: [], playlistName: 'New Playlist', playlistTracks: [] });
+        this.setState({ 
+          searchResults: [], 
+          playlistName: 'New Playlist', 
+          playlistTracks: [] });
       });
     } else {
       console.log('No tracks to add');
